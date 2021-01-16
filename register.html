@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Register</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="form" style="margin: auto; margin-top: 100px;">
+			<h2 align="center" style="padding: 20px;">Registeration</h2>
+			<form id="registerform" method="POST" action="register.php">
+
+				<p>
+					<label for="id_Name" class="text-label">Name</label><br/>
+					<input id="id_Name" type="text" name="Name" class="text-input" placeholder="Name" maxlength="64" />
+					<br/><label id="id_Name_validation" class="text-label" style="color: red;"></label>
+				</p>
+				<p>
+					<label for="id_Address" class="text-label">Address</label><br/>
+					<input id="id_Address" type="text" name="Address" class="text-input" placeholder="Address" maxlength="256" />
+					
+				</p>
+				<p>
+					<label for="id_email" class="text-label">Email Address</label><br/>
+					<input id="id_email" type="email" name="email" class="text-input" placeholder="email@address.com" />
+				</p>
+				<p>
+					<label for="id_password" class="text-label">Password</label><br/>
+					<input id="id_password" type="password" name="password" class="text-input" placeholder="password" onblur="CheckPassword(document.getElementById('id_password').value);" maxlength="256" />
+					<br/><label id="id_password_validation" class="text-label" style="color: red;"></label>
+				</p>
+				<p>
+					<label for="id_phone" class="text-label">Phone</label><br/>
+					<input id="id_phone" type="number" name="Phone" class="text-input" placeholder="phone" onblur="CheckPhone(document.getElementById('id_Phone').value);" maxlength="10" />
+					<br/><label id="id_phone_validation" class="text-label" style="color: red;"></label>
+				</p>
+				<div align="center">
+					<button type="button" class="button" onclick="RegisterValidate();">Register</button>
+				</div>
+			</form>
+		</div>
+		<script src="js.js"></script>
+	</body>
+</html>
